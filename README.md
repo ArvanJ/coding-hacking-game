@@ -1,6 +1,6 @@
 # Typing Test Game
 
-Welcome to the Typing Test Game, a simple web-based game that tests your typing speed and accuracy.
+Welcome to the Typing Test Game, a simple web-based game that tests your typing speed and accuracy. Made by ChatGPT.
 
 ## Table of Contents
 
