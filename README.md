@@ -6,7 +6,6 @@ Welcome to the Typing Test Game, a simple web-based game that tests your typing 
 
 - [Instructions](#instructions)
 - [Gameplay](#gameplay)
-- [Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
