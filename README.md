@@ -28,9 +28,6 @@ To play the Typing Test Game, follow these instructions:
 
 The Typing Test Game presents the player with a target word that they must type as quickly and accurately as possible. Each correctly typed word will result in a new word being presented. The game will track the player's speed and accuracy throughout the test, and display the results once the test is complete.
 
-## Demo
-
-You can see a live demo of the Typing Test Game at [https://example.com/typing-test-game](https://example.com/typing-test-game).
 
 ## Technologies Used
 
