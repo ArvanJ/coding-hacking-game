@@ -1,0 +1,106 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #232323;
+	color: #fff;
+	font-family: monospace;
+}
+
+.terminal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: 400px;
+	background-color: #2d2d2d;
+	border: 2px solid #333;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	height: 20px;
+	background-color: #f5f5f5;
+	border-bottom: 2px solid #333;
+	box-sizing: border-box;
+}
+
+.button {
+	position: absolute;
+	top: 0;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin: 4px;
+	box-sizing: border-box;
+}
+
+.red {
+	left: 0;
+	background-color: #ff5f57;
+}
+
+.yellow {
+	left: 16px;
+	background-color: #ffbd2e;
+}
+
+.green {
+	right: 0;
+	background-color: #29ca41;
+}
+
+.title {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 20px);
+	padding: 8px;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+.output {
+	margin-bottom: 8px;
+}
+
+.input {
+	position: relative;
+}
+
+#target-text {
+	color: #29ca41;
+}
+
+#input-text {
+	color: #fff;
+}
+
+#user-input {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	width: calc(100% - 16px);
+	background-color: transparent;
+	border: none;
+	box-sizing: border-box;
+	outline: none;
+	color: #fff;
+	font-size: 16px;
+}
+
+#user-input::placeholder {
+	color: #ccc;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typing Test Game</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-family: monospace;
+			font-size: 24px;
+			text-align: center;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.target-text {
+			color: green;
+		}
+
+		.input-text {
+			color: white;
+		}
+
+		.user-input {
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid white;
+			color: white;
+			font-family: monospace;
+			font-size: 24px;
+			margin-top: 16px;
+			padding: 8px;
+			text-align: center;
+			width: 80%;
+			outline: none;
+		}
+
+		.user-input:focus {
+			border-bottom: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p>Type the following:</p>
+		<p class="target-text" id="target-text"></p>
+		<p class="input-text" id="input-text"></p>
+		<input class="user-input" id="user-input" type="text" autofocus>
+	</div>
+	<script>
+		// Define the list of words for the typing test
+		const words = [
+			"programming",
+			"javascript",
+			"developer",
+			"function",
+			"variable",
+			"object",
+			"array",
+			"string",
+			"number",
+			"boolean",
+			"html",
+			"css",
+			"server",
+			"database",
+			"algorithm"
+		];
+
+		// Define variables for the game state
+		let targetWord = "";
+		let inputWord = "";
+		let wordIndex = 0;
+		let correctCount = 0;
+		let startTime = 0;
+		let endTime = 0;
+
+		// Define references to HTML elements
+		const targetTextElement = document.getElementById("target-text");
+		const inputTextElement = document.getElementById("input-text");
+		const userInputElement = document.getElementById("user-input");
+
+		// Generate a random word from the list for the user to type
+		function generateWord() {
+			const randomIndex = Math.floor(Math.random() * words.length);
+			return words[randomIndex];
+		}
+
+		// Update the target and input text elements
+		function updateText() {
+			targetTextElement.textContent = targetWord;
+			inputTextElement.textContent = inputWord;
+		}
+
+		// Handle the user input
+		function handleInput() {
+			// Get the user input value
+			const userInputValue = userInputElement.value;
+
+			// If the user finished typing the current word
+			if (userInputValue.endsWith(" ")) {
+				// Remove the trailing space from the input
+				inputWord = inputWord.trim();
+
+				// If the input word matches the target word
+				if (inputWord === targetWord) {
+					// Increment the correct count and reset the input word
+					correctCount++;
+					inputWord = "";
+					wordIndex++;
+
+					// If the user finished
+				}
+				
